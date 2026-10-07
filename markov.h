@@ -1,10 +1,15 @@
+#ifndef MARKOV_H
+#define MARKOV_H
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
 using namespace std;
 
 
 
-string joinWords(const string words[], int startIndex, int count);
 
+string joinWords(const string words[], int startIndex, int count);
 
 int readWordsFromFile(string filename, string words[], int maxWords);
 
@@ -20,3 +25,6 @@ string getRandomPrefix(const string prefixes[], int chainSize);
 
 
 string generateText(const string prefixes[], const string suffixes[], int chainSize, int order, int numWords);
+
+
+#endif
