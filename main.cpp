@@ -3,11 +3,12 @@
 #include <ctime>
 #include <string>
 #include "markov.h"
-
+//g++ -std=c++11 -Wall -Wextra -pedantic main.cpp markov.cpp -o markov
 using namespace std;
 
 
 int main(){
+    std::srand(std::time(0)); 
 
     std::string testWords[] = {"the", "cat", "sat", "down"};
     std::cout << joinWords(testWords, 0, 2) << std::endl;  // Should print: the cat
@@ -25,7 +26,8 @@ int main(){
     for (int i = 0; i < 20 && i < chainSize; i++) {
     std::cout << "[" << prefixes[i] << "] -> [" << suffixes[i] << "]" << std::endl;
     }
-
+    
+    cout << "updates";    
     cout << "\nFinished\n";
 
     return 0;
